@@ -8,11 +8,11 @@ public abstract class Product {
     public void setName(String name) {
         this.name = name;
     }
-    protected int price;
-    public int getPrice() {
+    protected long price;
+    public long getPrice() {
         return price;
     }
-    public void setPrice(int price) {
+    public void setPrice(long price) {
         this.price = price;
     }
 }
