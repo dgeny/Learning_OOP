@@ -30,6 +30,12 @@ public class HotDrinkVendingMachine implements WaterVendingMachine, VendingMachi
         return null;
     }
 
+    @Override
+    public Product getProduct(String name, int volume) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getProduct'");
+    }
+
 
 
    

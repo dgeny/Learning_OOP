@@ -20,12 +20,13 @@ public class program {
         l.add(new HotWater("Coffee", 50, 80, 1));
         l.add(new HotWater("Tee", 60, 94, 2));
         l.add(new HotWater("Very Hot Water", 50, 100, 20));
-        
+
         HotDrinkVendingMachine machine = new HotDrinkVendingMachine();
         machine.putProducts(l);
 
         System.out.println(machine.getProduct());
         System.out.println(machine.getProduct("Coffee", 94, 1) ); // test null printed
         System.out.println(machine.getProduct("Coffee", 80, 1) );
+        System.out.println(machine.getProduct("Coffee", 80, 1) );//test 
     }
 }
