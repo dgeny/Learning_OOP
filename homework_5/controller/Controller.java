@@ -44,11 +44,7 @@ public class Controller {
 
 
     public void removeStudentById(String id) {
-        try {
-            group.getStudentList().remove(getStudentById(id));
-        } catch (Exception e) {
-           System.out.println(e);
-        }
+        service.delGroupMember(group, id);
     }
 
 
@@ -58,13 +54,13 @@ public class Controller {
 
     public Teacher addTeacher(String name, String lastName, String dateOfBorn) {
         Teacher teacher = new Teacher(name, lastName, LocalDate.parse(dateOfBorn));
-        group.setTeacher(teacher);
+        service.setGroupManager(group, teacher);
         return group.getTeacher();
     }
 
     public Student addStudent(String name, String lastName, String dateOfBorn) {
         Student student = new Student(name, lastName, LocalDate.parse(dateOfBorn));
-        group.getStudentList().add(student);
+        service.addGroupMember(group, student);
         return student;
     }
 }
